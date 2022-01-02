@@ -11,7 +11,7 @@ import SwiftUI
 struct curso_tiago_aguiar_ios_app_habitApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView(viewModel: SplashViewModel())
         }
     }
 }

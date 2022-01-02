@@ -7,18 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3062FFAB277E573300A51196 /* curso_tiago_aguiar_ios_app_habitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3062FFAA277E573300A51196 /* curso_tiago_aguiar_ios_app_habitApp.swift */; };
-		3062FFAD277E573300A51196 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3062FFAC277E573300A51196 /* ContentView.swift */; };
+		3039CB26277F424300FBCAC7 /* SignInUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039CB25277F424200FBCAC7 /* SignInUIState.swift */; };
+		3039CB28277F492700FBCAC7 /* SignInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039CB27277F492700FBCAC7 /* SignInViewRouter.swift */; };
+		3039CB2E277F49E900FBCAC7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039CB2D277F49E900FBCAC7 /* HomeView.swift */; };
+		3039CB30277F4A6F00FBCAC7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039CB2F277F4A6F00FBCAC7 /* HomeViewModel.swift */; };
+		3039CB36277F504F00FBCAC7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039CB35277F504F00FBCAC7 /* SignUpView.swift */; };
+		3039CB3C277F62A400FBCAC7 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039CB3B277F62A400FBCAC7 /* GenderModel.swift */; };
+		3039CB3E277F69CD00FBCAC7 /* SignUpUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039CB3D277F69CD00FBCAC7 /* SignUpUIState.swift */; };
+		3039CB40277F6A2800FBCAC7 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039CB3F277F6A2800FBCAC7 /* SignUpViewModel.swift */; };
+		3039CB42277F6B4D00FBCAC7 /* SignUpViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039CB41277F6B4D00FBCAC7 /* SignUpViewRouter.swift */; };
 		3062FFAF277E573500A51196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3062FFAE277E573500A51196 /* Assets.xcassets */; };
 		3062FFB2277E573500A51196 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3062FFB1277E573500A51196 /* Preview Assets.xcassets */; };
+		3062FFBC277E57F500A51196 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3062FFBB277E57F500A51196 /* SplashView.swift */; };
+		3062FFC2277E5A6900A51196 /* curso_tiago_aguiar_ios_app_habitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3062FFC1277E5A6900A51196 /* curso_tiago_aguiar_ios_app_habitApp.swift */; };
+		3062FFC8277E5C9400A51196 /* SplashUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3062FFC7277E5C9400A51196 /* SplashUIState.swift */; };
+		3062FFCA277E6D4D00A51196 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3062FFC9277E6D4D00A51196 /* SplashViewModel.swift */; };
+		3062FFD0277E749000A51196 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3062FFCF277E749000A51196 /* SignInView.swift */; };
+		3062FFD2277E759400A51196 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3062FFD1277E759400A51196 /* SignInViewModel.swift */; };
+		3062FFD4277E764200A51196 /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3062FFD3277E764200A51196 /* SplashViewRouter.swift */; };
+		30882407278119FF00D4C173 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30882406278119FF00D4C173 /* String+Extension.swift */; };
+		3088240A27811E1500D4C173 /* LoadingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3088240927811E1500D4C173 /* LoadingButtonView.swift */; };
+		30EF81E22781051500F9DAB9 /* EditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF81E12781051500F9DAB9 /* EditTextView.swift */; };
+		30EF81E72781144B00F9DAB9 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF81E62781144B00F9DAB9 /* CustomTextFieldStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3039CB25277F424200FBCAC7 /* SignInUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUIState.swift; sourceTree = "<group>"; };
+		3039CB27277F492700FBCAC7 /* SignInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewRouter.swift; sourceTree = "<group>"; };
+		3039CB2D277F49E900FBCAC7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3039CB2F277F4A6F00FBCAC7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3039CB35277F504F00FBCAC7 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		3039CB3B277F62A400FBCAC7 /* GenderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderModel.swift; sourceTree = "<group>"; };
+		3039CB3D277F69CD00FBCAC7 /* SignUpUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUIState.swift; sourceTree = "<group>"; };
+		3039CB3F277F6A2800FBCAC7 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		3039CB41277F6B4D00FBCAC7 /* SignUpViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
 		3062FFA7277E573300A51196 /* curso-tiago-aguiar-ios-app-habit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "curso-tiago-aguiar-ios-app-habit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3062FFAA277E573300A51196 /* curso_tiago_aguiar_ios_app_habitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = curso_tiago_aguiar_ios_app_habitApp.swift; sourceTree = "<group>"; };
-		3062FFAC277E573300A51196 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3062FFAE277E573500A51196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3062FFB1277E573500A51196 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3062FFBB277E57F500A51196 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		3062FFC1277E5A6900A51196 /* curso_tiago_aguiar_ios_app_habitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = curso_tiago_aguiar_ios_app_habitApp.swift; sourceTree = "<group>"; };
+		3062FFC7277E5C9400A51196 /* SplashUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUIState.swift; sourceTree = "<group>"; };
+		3062FFC9277E6D4D00A51196 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		3062FFCF277E749000A51196 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		3062FFD1277E759400A51196 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		3062FFD3277E764200A51196 /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
+		30882406278119FF00D4C173 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3088240927811E1500D4C173 /* LoadingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButtonView.swift; sourceTree = "<group>"; };
+		30EF81E12781051500F9DAB9 /* EditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextView.swift; sourceTree = "<group>"; };
+		30EF81E62781144B00F9DAB9 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +68,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3039CB29277F498300FBCAC7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3039CB2C277F49A500FBCAC7 /* Model */,
+				3039CB2B277F499D00FBCAC7 /* View */,
+				3039CB2A277F499300FBCAC7 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3039CB2A277F499300FBCAC7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3039CB2F277F4A6F00FBCAC7 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3039CB2B277F499D00FBCAC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3039CB2D277F49E900FBCAC7 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3039CB2C277F49A500FBCAC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3039CB31277F501200FBCAC7 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				3039CB34277F504200FBCAC7 /* Model */,
+				3039CB33277F503C00FBCAC7 /* View */,
+				3039CB32277F503100FBCAC7 /* ViewModel */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		3039CB32277F503100FBCAC7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3039CB3F277F6A2800FBCAC7 /* SignUpViewModel.swift */,
+				3039CB41277F6B4D00FBCAC7 /* SignUpViewRouter.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3039CB33277F503C00FBCAC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3039CB35277F504F00FBCAC7 /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3039CB34277F504200FBCAC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3039CB3D277F69CD00FBCAC7 /* SignUpUIState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3039CB37277F625900FBCAC7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				30882405278119C700D4C173 /* Lang */,
+				3039CB3A277F627F00FBCAC7 /* Model */,
+				30EF81E32781052800F9DAB9 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3039CB3A277F627F00FBCAC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3039CB3B277F62A400FBCAC7 /* GenderModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3062FF9E277E573300A51196 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +173,11 @@
 		3062FFA9277E573300A51196 /* curso-tiago-aguiar-ios-app-habit */ = {
 			isa = PBXGroup;
 			children = (
-				3062FFAA277E573300A51196 /* curso_tiago_aguiar_ios_app_habitApp.swift */,
-				3062FFAC277E573300A51196 /* ContentView.swift */,
+				3039CB37277F625900FBCAC7 /* Common */,
+				3039CB31277F501200FBCAC7 /* SignUp */,
+				3039CB29277F498300FBCAC7 /* Home */,
+				3062FFCB277E743900A51196 /* SignIn */,
+				3062FFB8277E574C00A51196 /* Splash */,
 				3062FFAE277E573500A51196 /* Assets.xcassets */,
 				3062FFB0277E573500A51196 /* Preview Content */,
 			);
@@ -62,9 +187,106 @@
 		3062FFB0277E573500A51196 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				3062FFC1277E5A6900A51196 /* curso_tiago_aguiar_ios_app_habitApp.swift */,
 				3062FFB1277E573500A51196 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3062FFB8277E574C00A51196 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3062FFC6277E5C7900A51196 /* Model */,
+				3062FFBA277E57AA00A51196 /* View */,
+				3062FFB9277E579A00A51196 /* ViewModel */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3062FFB9277E579A00A51196 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3062FFC9277E6D4D00A51196 /* SplashViewModel.swift */,
+				3062FFD3277E764200A51196 /* SplashViewRouter.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3062FFBA277E57AA00A51196 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3062FFBB277E57F500A51196 /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3062FFC6277E5C7900A51196 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3062FFC7277E5C9400A51196 /* SplashUIState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3062FFCB277E743900A51196 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				3062FFCE277E745200A51196 /* Model */,
+				3062FFCD277E744C00A51196 /* View */,
+				3062FFCC277E744200A51196 /* VIewModel */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		3062FFCC277E744200A51196 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3062FFD1277E759400A51196 /* SignInViewModel.swift */,
+				3039CB27277F492700FBCAC7 /* SignInViewRouter.swift */,
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		3062FFCD277E744C00A51196 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3062FFCF277E749000A51196 /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3062FFCE277E745200A51196 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3039CB25277F424200FBCAC7 /* SignInUIState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30882405278119C700D4C173 /* Lang */ = {
+			isa = PBXGroup;
+			children = (
+				30882406278119FF00D4C173 /* String+Extension.swift */,
+			);
+			path = Lang;
+			sourceTree = "<group>";
+		};
+		30EF81E32781052800F9DAB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30EF81E12781051500F9DAB9 /* EditTextView.swift */,
+				30EF81E52781143000F9DAB9 /* Style */,
+				3088240927811E1500D4C173 /* LoadingButtonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30EF81E52781143000F9DAB9 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				30EF81E62781144B00F9DAB9 /* CustomTextFieldStyle.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +359,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3062FFAD277E573300A51196 /* ContentView.swift in Sources */,
-				3062FFAB277E573300A51196 /* curso_tiago_aguiar_ios_app_habitApp.swift in Sources */,
+				3062FFC8277E5C9400A51196 /* SplashUIState.swift in Sources */,
+				3039CB3C277F62A400FBCAC7 /* GenderModel.swift in Sources */,
+				3039CB30277F4A6F00FBCAC7 /* HomeViewModel.swift in Sources */,
+				3088240A27811E1500D4C173 /* LoadingButtonView.swift in Sources */,
+				30882407278119FF00D4C173 /* String+Extension.swift in Sources */,
+				3039CB42277F6B4D00FBCAC7 /* SignUpViewRouter.swift in Sources */,
+				3062FFC2277E5A6900A51196 /* curso_tiago_aguiar_ios_app_habitApp.swift in Sources */,
+				3062FFD2277E759400A51196 /* SignInViewModel.swift in Sources */,
+				3039CB36277F504F00FBCAC7 /* SignUpView.swift in Sources */,
+				3039CB2E277F49E900FBCAC7 /* HomeView.swift in Sources */,
+				3039CB40277F6A2800FBCAC7 /* SignUpViewModel.swift in Sources */,
+				3039CB3E277F69CD00FBCAC7 /* SignUpUIState.swift in Sources */,
+				3039CB28277F492700FBCAC7 /* SignInViewRouter.swift in Sources */,
+				3062FFBC277E57F500A51196 /* SplashView.swift in Sources */,
+				3062FFCA277E6D4D00A51196 /* SplashViewModel.swift in Sources */,
+				3039CB26277F424300FBCAC7 /* SignInUIState.swift in Sources */,
+				30EF81E72781144B00F9DAB9 /* CustomTextFieldStyle.swift in Sources */,
+				30EF81E22781051500F9DAB9 /* EditTextView.swift in Sources */,
+				3062FFD4277E764200A51196 /* SplashViewRouter.swift in Sources */,
+				3062FFD0277E749000A51196 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
