@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct curso_tiago_aguiar_ios_app_habitApp: App {
+struct Habit: App {
     var body: some Scene {
         WindowGroup {
             SplashView(viewModel: SplashViewModel())
