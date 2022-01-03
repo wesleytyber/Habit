@@ -41,7 +41,7 @@
 		3039CB3D277F69CD00FBCAC7 /* SignUpUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUIState.swift; sourceTree = "<group>"; };
 		3039CB3F277F6A2800FBCAC7 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		3039CB41277F6B4D00FBCAC7 /* SignUpViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
-		3062FFA7277E573300A51196 /* curso-tiago-aguiar-ios-app-habit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "curso-tiago-aguiar-ios-app-habit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3062FFA7277E573300A51196 /* Habit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3062FFAE277E573500A51196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3062FFB1277E573500A51196 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3062FFBB277E57F500A51196 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		3062FF9E277E573300A51196 = {
 			isa = PBXGroup;
 			children = (
-				3062FFA9277E573300A51196 /* curso-tiago-aguiar-ios-app-habit */,
+				3062FFA9277E573300A51196 /* Habit */,
 				3062FFA8277E573300A51196 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,12 +165,12 @@
 		3062FFA8277E573300A51196 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3062FFA7277E573300A51196 /* curso-tiago-aguiar-ios-app-habit.app */,
+				3062FFA7277E573300A51196 /* Habit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3062FFA9277E573300A51196 /* curso-tiago-aguiar-ios-app-habit */ = {
+		3062FFA9277E573300A51196 /* Habit */ = {
 			isa = PBXGroup;
 			children = (
 				3039CB37277F625900FBCAC7 /* Common */,
@@ -181,7 +181,7 @@
 				3062FFAE277E573500A51196 /* Assets.xcassets */,
 				3062FFB0277E573500A51196 /* Preview Content */,
 			);
-			path = "curso-tiago-aguiar-ios-app-habit";
+			path = Habit;
 			sourceTree = "<group>";
 		};
 		3062FFB0277E573500A51196 /* Preview Content */ = {
@@ -292,9 +292,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3062FFA6277E573300A51196 /* curso-tiago-aguiar-ios-app-habit */ = {
+		3062FFA6277E573300A51196 /* Habit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3062FFB5277E573500A51196 /* Build configuration list for PBXNativeTarget "curso-tiago-aguiar-ios-app-habit" */;
+			buildConfigurationList = 3062FFB5277E573500A51196 /* Build configuration list for PBXNativeTarget "Habit" */;
 			buildPhases = (
 				3062FFA3277E573300A51196 /* Sources */,
 				3062FFA4277E573300A51196 /* Frameworks */,
@@ -304,9 +304,9 @@
 			);
 			dependencies = (
 			);
-			name = "curso-tiago-aguiar-ios-app-habit";
+			name = Habit;
 			productName = "curso-tiago-aguiar-ios-app-habit";
-			productReference = 3062FFA7277E573300A51196 /* curso-tiago-aguiar-ios-app-habit.app */;
+			productReference = 3062FFA7277E573300A51196 /* Habit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -337,7 +337,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3062FFA6277E573300A51196 /* curso-tiago-aguiar-ios-app-habit */,
+				3062FFA6277E573300A51196 /* Habit */,
 			);
 		};
 /* End PBXProject section */
@@ -508,7 +508,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"curso-tiago-aguiar-ios-app-habit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Habit/Preview Content\"";
 				DEVELOPMENT_TEAM = A8WP3R74BG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -522,8 +522,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "calazans-wesley.curso-tiago-aguiar-ios-app-habit";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "calazans-wesley.Habit";
+				PRODUCT_NAME = Habit;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,7 +537,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"curso-tiago-aguiar-ios-app-habit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Habit/Preview Content\"";
 				DEVELOPMENT_TEAM = A8WP3R74BG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -551,8 +551,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "calazans-wesley.curso-tiago-aguiar-ios-app-habit";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "calazans-wesley.Habit";
+				PRODUCT_NAME = Habit;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -571,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3062FFB5277E573500A51196 /* Build configuration list for PBXNativeTarget "curso-tiago-aguiar-ios-app-habit" */ = {
+		3062FFB5277E573500A51196 /* Build configuration list for PBXNativeTarget "Habit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3062FFB6277E573500A51196 /* Debug */,

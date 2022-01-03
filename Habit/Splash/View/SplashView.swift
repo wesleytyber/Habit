@@ -1,6 +1,6 @@
 //
 //  SplashView.swift
-//  curso-tiago-aguiar-ios-app-habit
+//  Habit
 //
 //  Created by Wesley Calazans on 30/12/21.
 //
