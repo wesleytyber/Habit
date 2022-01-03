@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct SplashView: View {
-
+    
     @ObservedObject var viewModel: SplashViewModel
     
-    var body: some View { 
+    var body: some View {
         Group  {
             switch viewModel.uiState {
             case .loading:
-               LoadingView()
-                 
-            // navigate to screen
+                LoadingView()
+                
+                // navigate to screen
             case .goToSignInScreen:
                 viewModel.signInView()
                 
-            // navigate to screen
+                // navigate to screen
             case .goToHomeScreen:
                 Text("Home Screen")
                 
@@ -49,19 +49,19 @@ extension SplashView {
                         Alert(title: Text("Habit"), message: Text(error), dismissButton: .default(Text("Ok")) {
                             
                         })
-                    }
+                }
             }
         }
     }
 }
 
 struct SplashView_Previews: PreviewProvider {
-   static var previews: some View {
-       ForEach(ColorScheme.allCases, id: \.self) { value in
-       let viewModel = SplashViewModel()
-       SplashView(viewModel: viewModel)
-               .previewDevice("iPhone 13")
-               .preferredColorScheme(value)
-       }
+    static var previews: some View {
+        ForEach(ColorScheme.allCases, id: \.self) { value in
+            let viewModel = SplashViewModel()
+            SplashView(viewModel: viewModel)
+                .previewDevice("iPhone 13")
+                .preferredColorScheme(value)
+        }
     }
 }

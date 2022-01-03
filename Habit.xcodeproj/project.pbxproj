@@ -324,7 +324,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3062FFA2277E573300A51196 /* Build configuration list for PBXProject "curso-tiago-aguiar-ios-app-habit" */;
+			buildConfigurationList = 3062FFA2277E573300A51196 /* Build configuration list for PBXProject "Habit" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -562,7 +562,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3062FFA2277E573300A51196 /* Build configuration list for PBXProject "curso-tiago-aguiar-ios-app-habit" */ = {
+		3062FFA2277E573300A51196 /* Build configuration list for PBXProject "Habit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3062FFB3277E573500A51196 /* Debug */,
