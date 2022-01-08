@@ -15,6 +15,7 @@ struct CustomTextFieldStyle: TextFieldStyle {
             .overlay(
             RoundedRectangle(cornerRadius: 10)
             .stroke(Color.orange, lineWidth: 0.8)
+                .multilineTextAlignment(.leading)
             )
     }
 }

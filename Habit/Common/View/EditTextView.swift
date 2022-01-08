@@ -32,7 +32,7 @@ struct EditTextView: View {
                     .textFieldStyle(CustomTextFieldStyle())
             }
             
-               
+            
             if let error = error, failure == true, !text.isEmpty {
                 Text(error).foregroundColor(.red)
                 
@@ -42,17 +42,17 @@ struct EditTextView: View {
 }
 
 struct EditTextView_Previews: PreviewProvider {
-      static var previews: some View {
-          
-          ForEach(ColorScheme.allCases, id: \.self) { value in
-              
-              VStack {
-                  EditTextView(text: .constant(""), placeholder: "E-mail", error: "e-mail inválido", failure: "email@email.com".count < 5)
-              }
-              .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .previewDevice("iPhone 12")
-                    .preferredColorScheme(value)
-          }
-  
+    static var previews: some View {
+        
+        ForEach(ColorScheme.allCases, id: \.self) { value in
+            
+            VStack {
+                EditTextView(text: .constant(""), placeholder: "E-mail", error: "e-mail inválido", failure: "email@email.com".count < 5)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .previewDevice("iPhone 12")
+            .preferredColorScheme(value)
+        }
+        
     }
 }
