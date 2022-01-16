@@ -137,7 +137,7 @@ extension SignUpView {
     var saveButton: some View {
         LoadingButtonView(action: { viewModel.signUp()
             
-        }, text: "Realiza o cadastro", showProgress: self.viewModel.uiState == SignUpUIState.loading, disabled:  !viewModel.email.isEmail() ||
+        }, text: "Realizar o cadastro", showProgress: self.viewModel.uiState == SignUpUIState.loading, disabled:  !viewModel.email.isEmail() ||
                           viewModel.password.count < 8 ||
                           viewModel.fullName.count < 3 ||
                           viewModel.document.count != 11 ||

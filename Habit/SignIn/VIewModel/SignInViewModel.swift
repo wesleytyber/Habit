@@ -11,7 +11,7 @@ import Combine
 class SignInViewModel: ObservableObject {
     
     @Published var email = ""
-    @Published  var password = ""
+    @Published var password = ""
     
     private var cancellable: AnyCancellable?
     
@@ -55,7 +55,12 @@ class SignInViewModel: ObservableObject {
                 }
                 
             } receiveValue: { success in
-                // Aqui acontece o sucesso
+                let auth =  UserAuth(idToken: success.accessToken,
+                                     refreshToken: success.refreshToken,
+                                     expires: Date().timeIntervalSince1970 + Double (success.expires),
+                                     tokenType: success.tokenType)
+                
+                self.interactor.insertAuth(userAuth: auth)
                 print(success)
                 self.uiState = .goToHomeScreen
             }
