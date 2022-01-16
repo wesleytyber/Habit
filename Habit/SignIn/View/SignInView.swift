@@ -134,7 +134,7 @@ extension SignInView {
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) { value in
-            let viewModel = SignInViewModel()
+            let viewModel = SignInViewModel(interactor: SignInInteractor())
             SignInView(viewModel: viewModel)
                 .previewDevice("iPhone 12")
                 .preferredColorScheme(value)

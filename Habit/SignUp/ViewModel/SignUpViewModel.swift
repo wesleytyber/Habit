@@ -21,6 +21,20 @@ class SignUpViewModel: ObservableObject {
     
     @Published var uiState: SignUpUIState = .none
     
+    private let interactor: SignUpInteractor
+    
+    private var cancellableSignUp: AnyCancellable?
+    private var cancellableSignIn: AnyCancellable?
+    
+    init(interactor: SignUpInteractor) {
+        self.interactor = interactor
+    }
+    
+    deinit {
+        cancellableSignIn?.cancel()
+        cancellableSignUp?.cancel()
+    }
+    
     func signUp() {
         self.uiState = .loading
         
@@ -40,39 +54,49 @@ class SignUpViewModel: ObservableObject {
         formatter.dateFormat = "yyyy-MM-dd"
         let birthday = formatter.string(from: dateFormatted)
         
-        WebService.postUser(request: SignUpRequest(fullName: fullName,
-                                                   email: email,
-                                                   password: password,
-                                                   document: document,
-                                                   phone: number,
-                                                   birthday: birthday,
-                                                   gender: gender.index )) { (successResponse, errorResponse) in
-            if let error = errorResponse {
-                DispatchQueue.main.async {
-                    self.uiState = .error(error.detail)
+        let signUpRequest =  SignUpRequest(fullName: fullName,
+                                           email: email,
+                                           password: password,
+                                           document: document,
+                                           phone: number,
+                                           birthday: birthday,
+                                           gender: gender.index )
+        
+        cancellableSignUp = interactor.postUser(signUpRequest: signUpRequest)
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                switch (completion) {
+                case .failure(let appErrorModel):
+                    self.uiState = .error(appErrorModel.message)
+                    break
+                case .finished:
+                    break
                 }
-            }
-            if let success = successResponse {
-                WebService.login(request: SignInRequest(email: self.email, password: self.password )) { (successResponse, errorResponse) in
+            } receiveValue: { created in
+                if (created) {
+                    // se tiver criado -> login
                     
-                    if let errorSignIn = errorResponse {
-                        DispatchQueue.main.async {
-                            self.uiState = .error(errorSignIn.detail.message)
-                        }
-                    }
-                    if let successSignIn = successResponse {
-                        DispatchQueue.main.async {
-                            print(successSignIn)
-                            self.publisher.send(success)
+                    self.cancellableSignIn = self.interactor.login(signInRequest: SignInRequest(email: self.email, password: self.password))
+                        .receive(on: DispatchQueue.main)
+                        .sink { completion in
+                            
+                            switch(completion) {
+                            case .failure(let appErrorModal):
+                                self.uiState = .error(appErrorModal.message)
+                                break
+                            case .finished:
+                                break
+                            }
+                        }receiveValue: { successSignIn in
+                            print(created)
+                            self.publisher.send(created)
                             self.uiState = .success
                         }
-                    }
                 }
-                
             }
-        }
     }
 }
+
 
 extension SignUpViewModel {
     func homeView() -> some  View {

@@ -15,11 +15,16 @@ class SignInViewModel: ObservableObject {
     
     private var cancellable: AnyCancellable?
     
+    private var cancellableRequest: AnyCancellable?
+
     private let publisher = PassthroughSubject<Bool, Never>()
+    
+    private let interactor: SignInInteractor
     
     @Published var uiState: SignInUIState = .none
     
-    init () {
+    init (interactor: SignInInteractor) {
+        self.interactor = interactor
         cancellable  = publisher.sink {value in
             print("Usuário criado! goToHome: \(value)")
             
@@ -31,25 +36,46 @@ class SignInViewModel: ObservableObject {
     
     deinit {
         cancellable?.cancel()
+        cancellableRequest?.cancel()
     }
     
     func login() {
         self.uiState = .loading
-        WebService.login(request: SignInRequest(email: email, password: password )) { (successResponse, errorResponse) in
-            
-            if let error = errorResponse {
-                DispatchQueue.main.async {
-                    self.uiState = .error(error.detail.message)
+        
+       cancellableRequest = interactor.login(loginRequest: SignInRequest(email: email, password: password))
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                // Aqui acontence o error ou finished
+                switch(completion) {
+                case .failure(let appErrorModel):
+                    self.uiState = SignInUIState.error(appErrorModel.message)
+                    break
+                case .finished:
+                    break
                 }
+                
+            } receiveValue: { success in
+                // Aqui acontece o sucesso
+                print(success)
+                self.uiState = .goToHomeScreen
             }
-            if let success = successResponse {
-                DispatchQueue.main.async {
-              print(success)
-                    self.uiState = .goToHomeScreen
-                }
-            }
-        }
-       
+        
+        
+//        interactor.login(loginRequest: SignInRequest(email: email, password: password)) { (successResponse, errorResponse) in
+//
+//            if let error = errorResponse {
+//                DispatchQueue.main.async {
+//                    self.uiState = .error(error.detail.message)
+//                }
+//            }
+//            if let success = successResponse {
+//                DispatchQueue.main.async {
+//                    print(success)
+//                    self.uiState = .goToHomeScreen
+//                }
+//            }
+//        }
+        
     }
 }
 
