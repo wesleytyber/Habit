@@ -17,7 +17,6 @@ struct EditTextView: View {
     var failure: Bool? = nil
     var isSecure: Bool = false
     
-    
     var body: some View {
         VStack {
             if isSecure {
@@ -32,10 +31,8 @@ struct EditTextView: View {
                     .textFieldStyle(CustomTextFieldStyle())
             }
             
-            
             if let error = error, failure == true, !text.isEmpty {
                 Text(error).foregroundColor(.red)
-                
             }
         }.padding(.bottom, 10)
     }
@@ -53,6 +50,5 @@ struct EditTextView_Previews: PreviewProvider {
             .previewDevice("iPhone 12")
             .preferredColorScheme(value)
         }
-        
     }
 }

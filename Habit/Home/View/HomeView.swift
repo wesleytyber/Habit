@@ -11,27 +11,30 @@ struct HomeView: View {
     
     @ObservedObject var  viewModel: HomeViewModel
     
+    @State var selection = 0
+    
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Home Scren")
-                    .foregroundColor(Color.blue)
-                    .font(Font.system(.title))
-                    .navigationBarTitle("Home", displayMode: .automatic)
-
-                NavigationLink(destination: DetailView()) {
-                    
-                    Text("Detail screen")
-                        .padding()
-                        .font(Font.system(.title))
-                        .padding(.top, 20)
-                        .background(Color("textColor"))
-                        .cornerRadius(10)
-                        
-                }
-                
-            }
+        TabView(selection: $selection) {
+            viewModel.habitView()
+                .tabItem {
+                    Image(systemName: "square.grid.2x2")
+                    Text("Hábitos")
+                }.tag(0)
+            
+            Text("Conteúdo de gráficos \(selection)")
+                .tabItem {
+                    Image(systemName: "chart.bar")
+                    Text("Gráficos")
+                }.tag(1)
+            
+            Text("Conteúdo de perfil \(selection)")
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("Perfil")
+                }.tag(2)
         }
+        .background(Color.white)
+        .accentColor(Color.orange)
     }
 }
 

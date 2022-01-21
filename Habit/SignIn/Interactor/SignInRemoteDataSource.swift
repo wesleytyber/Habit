@@ -32,7 +32,6 @@ class SignInRemoteDataSource {
                             let response = try? decoder.decode(SignInErrorResponse.self, from: data)
                             // completion(nil, response )
                             promise(.failure(AppErrorModel.response(message: response?.detail.message ?? "Error desconhecido no servidor")))
-                            
                         }
                     }
                     break
@@ -46,7 +45,6 @@ class SignInRemoteDataSource {
                     }
                     
                     promise(.success(response))
-                    
                     
                     break
                 }

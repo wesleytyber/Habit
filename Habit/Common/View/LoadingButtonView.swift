@@ -23,7 +23,7 @@ struct LoadingButtonView: View {
             }, label: {
                 Text(showProgress ? "" : text)
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 14)
+                    .padding(.vertical, 16)
                     .padding(.horizontal, 16)
                     .font(Font.system(.title3).bold())
                     .background(disabled ? Color("lightOrange") : Color.orange)
@@ -47,14 +47,13 @@ struct LoadingButtonView_Previews: PreviewProvider {
                 LoadingButtonView(action:{
                     print("Ola mundo")
                 },
-                text: "Entrar",
-                showProgress: true,
-                disabled: true)
+                                  text: "Entrar",
+                                  showProgress: true,
+                                  disabled: true)
             }.padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .previewDevice("iPhone 13")
                 .preferredColorScheme(value)
         }
-        
     }
 }

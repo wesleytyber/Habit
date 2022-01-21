@@ -32,5 +32,4 @@ extension SignUpInteractor {
     func insertAuth(userAuth: UserAuth) {
         local.insertUserAuth(userAuth: userAuth)
     }
-    
 }

@@ -13,7 +13,6 @@ struct SignInErrorResponse: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case detail
-        
     }
 }
 
@@ -23,7 +22,6 @@ struct SignInDetailErrorResponse: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case message
-        
     }
 }
 

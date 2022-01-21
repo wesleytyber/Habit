@@ -18,27 +18,25 @@ class SignUpRemoteDataSource {
         
     }
     
-    
     func postUser(request: SignUpRequest) -> Future<Bool, AppErrorModel> {
         return Future { promise in
             WebService.call(path: .postUser, method: .post, body: request) { Result in
                 switch Result {
-                    case .failure(let error, let data):
-                        if let data = data {
-                            if error == .badRequest{
-                                let decoder = JSONDecoder()
-                                let response = try? decoder.decode(ErrorResponse.self, from: data)
-                                promise(.failure(AppErrorModel.response(message: response?.detail ?? "Error interno")))
-                            }
+                case .failure(let error, let data):
+                    if let data = data {
+                        if error == .badRequest{
+                            let decoder = JSONDecoder()
+                            let response = try? decoder.decode(ErrorResponse.self, from: data)
+                            promise(.failure(AppErrorModel.response(message: response?.detail ?? "Error interno")))
                         }
-                        break
-                        case .success(_):
+                    }
+                    break
+                case .success(_):
                     // completion(true, nil)
                     promise(.success(true))
-                            break
+                    break
                 }
             }
         }
-       
     }
 }

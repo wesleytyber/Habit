@@ -12,22 +12,19 @@ struct SplashView: View {
     @ObservedObject var viewModel: SplashViewModel
     
     var body: some View {
-        Group  {
+        Group {
             switch viewModel.uiState {
             case .loading:
                 LoadingView()
                 
-                // navigate to screen
             case .goToSignInScreen:
                 viewModel.signInView()
                 
-                // navigate to screen
             case .goToHomeScreen:
-                Text("Home Screen")
+                viewModel.homeView()
                 
             case .error(let msg):
                 LoadingView(error: msg)
-                
             }
         }.onAppear(perform: viewModel.onAppear)
     }
@@ -47,9 +44,8 @@ extension SplashView {
                 Text("")
                     .alert(isPresented: .constant(true)) {
                         Alert(title: Text("Habit"), message: Text(error), dismissButton: .default(Text("Ok")) {
-                            
                         })
-                }
+                    }
             }
         }
     }

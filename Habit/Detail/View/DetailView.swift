@@ -20,6 +20,5 @@ struct DetailView_Previews: PreviewProvider {
                 .previewDevice("iPhone 12")
                 .preferredColorScheme(value)
         }
-        
     }
 }
