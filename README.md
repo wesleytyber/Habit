@@ -4,7 +4,7 @@
 <img width="300px" height="auto" src="Habit/Assets.xcassets/splash.imageset/Screen Shot 2022-01-03 at 6.53.16 PM.png"/>
 <img width="300px" height="610px" src="Habit/Assets.xcassets/login.imageset/Screen Shot 2022-01-03 at 6.51.32 PM.png"/><br>
 <img width="300px" height="auto" src="Habit/Assets.xcassets/login2.imageset/Screen Shot 2022-01-03 at 6.52.34 PM.png"/>
-<img width="300px" height="auto" src="Habit/Assets.xcassets/cadastro.imageset/Screen Shot 2022-01-03 at 6.52.51 PM.png"/>
+<img width="300px" height="643px" src="Habit/Assets.xcassets/cadastro.imageset/cadastro.png"/>
 </div>
 
 ✔️ Tecnologias
