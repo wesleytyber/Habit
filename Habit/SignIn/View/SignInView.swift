@@ -135,7 +135,7 @@ struct SignInView_Previews: PreviewProvider {
         ForEach(ColorScheme.allCases, id: \.self) { value in
             let viewModel = SignInViewModel(interactor: SignInInteractor())
             SignInView(viewModel: viewModel)
-                .previewDevice("iPhone 12")
+                .previewDevice("iPhone 13")
                 .preferredColorScheme(value)
         }
     }

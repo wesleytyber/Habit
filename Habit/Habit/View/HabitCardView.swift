@@ -125,7 +125,7 @@ struct HabitCardView_Previews: PreviewProvider {
                     .navigationTitle("Hábitos")
                 
             }
-            .previewDevice("iPhone 12")
+            .previewDevice("iPhone 13")
             .preferredColorScheme($0)
         }
     }

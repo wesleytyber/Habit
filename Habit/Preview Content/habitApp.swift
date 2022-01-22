@@ -1,6 +1,6 @@
 //
-//  curso_tiago_aguiar_ios_app_habitApp.swift
-//  curso-tiago-aguiar-ios-app-habit
+//  habitApp.swift
+//  habit
 //
 //  Created by Wesley Calazans on 30/12/21.
 //
