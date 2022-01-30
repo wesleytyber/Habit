@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct HabitDetailView: View {
     
     @ObservedObject var viewModel: HabitDetailViewModel
@@ -75,7 +74,7 @@ struct HabitDetail_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
         HabitDetailView(viewModel: HabitDetailViewModel(id: 1, name: "Estudar Alemão", label: "horas", interactor: HabitDetailInteractor()))
-                .previewDevice("iPhone 12")
+                .previewDevice("iPhone 13")
                 .preferredColorScheme($0)
         }
     }

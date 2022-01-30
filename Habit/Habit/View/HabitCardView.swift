@@ -12,18 +12,30 @@ struct HabitCardView: View {
     
     @State private var action = false
     
+    let isChart: Bool
     let viewModel: HabitCardViewModel
     
     var body: some View {
+        
         ZStack(alignment: .trailing) {
             
-            NavigationLink(
-                destination: viewModel.HabitDetailView(),
-                isActive: self.$action,
-                label: {
-                    EmptyView()
-                }
-            )
+            if isChart {
+                NavigationLink(
+                    destination: viewModel.chartView(),
+                    isActive: self.$action,
+                    label: {
+                        EmptyView()
+                    }
+                )
+            } else {
+                NavigationLink(
+                    destination: viewModel.habitDetailView(),
+                    isActive: self.$action,
+                    label: {
+                        EmptyView()
+                    }
+                )
+            }
             
             Button(action: {
                 self.action = true
@@ -43,7 +55,6 @@ struct HabitCardView: View {
                             
                             Text(viewModel.name)
                                 .foregroundColor(Color.orange)
-                            
                             
                             Text(viewModel.label)
                                 .foregroundColor(Color("textColor"))
@@ -74,16 +85,18 @@ struct HabitCardView: View {
                 .cornerRadius(4)
             })
             
-            Rectangle()
-                .frame(width: 8)
-                .foregroundColor(viewModel.state)
+            if !isChart {
+                Rectangle()
+                    .frame(width: 8)
+                    .foregroundColor(viewModel.state)
+            }
             
         }.background(
             RoundedRectangle(cornerRadius: 4.0)
                 .stroke(Color.orange, lineWidth: 0)
                 .shadow(color: .gray, radius: 2, x: 2.0, y: 2.0)
         )
-        .padding(.vertical, 4)
+            .padding(.vertical, 4)
     }
 }
 
@@ -93,7 +106,7 @@ struct HabitCardView_Previews: PreviewProvider {
         ForEach(ColorScheme.allCases, id: \.self) {
             NavigationView {
                 List {
-                    HabitCardView(viewModel: HabitCardViewModel(
+                    HabitCardView(isChart: false, viewModel: HabitCardViewModel(
                         id: 1,
                         icon: "https://via.placeholder.com/150",
                         date: "01/01/2021 00:00",
@@ -103,7 +116,7 @@ struct HabitCardView_Previews: PreviewProvider {
                         state: .green,
                         habitPublisher: PassthroughSubject<Bool, Never>()))
                     
-                    HabitCardView(viewModel: HabitCardViewModel(
+                    HabitCardView(isChart: false, viewModel: HabitCardViewModel(
                         id: 2,
                         icon: "https://via.placeholder.com/150",
                         date: "25/04/2021 00:00",
@@ -112,7 +125,7 @@ struct HabitCardView_Previews: PreviewProvider {
                         value: "1",
                         state: .green, habitPublisher: PassthroughSubject<Bool, Never>()))
                     
-                    HabitCardView(viewModel: HabitCardViewModel(
+                    HabitCardView(isChart: false, viewModel: HabitCardViewModel(
                         id: 3,
                         icon: "https://via.placeholder.com/150",
                         date: "01/11/2021 00:00",

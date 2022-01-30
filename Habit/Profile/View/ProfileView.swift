@@ -73,7 +73,7 @@ struct ProfileView: View {
                                 }
                                 
                                 HStack {
-                                    Text("Data de nascimento")
+                                    Text("Nascimento")
                                     Spacer()
                                     TextField("Digite a data de nascimento", text: $viewModel.birthdayValidation.value)
                                         .multilineTextAlignment(.trailing)
@@ -146,9 +146,8 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
             ProfileView(viewModel: ProfileViewModel(interactor: ProfileInteractor()))
-                .previewDevice("iPhone 11")
+                .previewDevice("iPhone 13")
                 .preferredColorScheme($0)
-            
         }
     }
 }
