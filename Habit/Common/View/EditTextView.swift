@@ -1,4 +1,4 @@
-//
+ //
 //  EditTextView.swift
 //  curso-tiago-aguiar-ios-app-habit
 //
@@ -12,10 +12,12 @@ struct EditTextView: View {
     @Binding var text: String
     
     var placeholder: String = ""
+    var mask: String? = nil
     var keyboard: UIKeyboardType = .default
     var error: String? = nil
     var failure: Bool? = nil
     var isSecure: Bool = false
+    var autocaptalization: UITextAutocapitalizationType = .none
     
     var body: some View {
         VStack {
@@ -28,7 +30,14 @@ struct EditTextView: View {
                 TextField(placeholder, text: $text)
                     .foregroundColor(Color("textColor"))
                     .keyboardType(keyboard)
+                    .autocapitalization(autocaptalization)
                     .textFieldStyle(CustomTextFieldStyle())
+                    .onChange(of: text) { value in
+                        if let mask = mask {
+                            
+                            Mask.mask(mask: mask, value: value, text: &text )
+                        }
+                    }
             }
             
             if let error = error, failure == true, !text.isEmpty {

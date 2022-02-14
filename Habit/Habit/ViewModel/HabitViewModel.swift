@@ -89,10 +89,15 @@ class HabitViewModel: ObservableObject {
                                                       label: $0.label,
                                                       value: "\($0.value ?? 0)",
                                                       state: state, habitPublisher: self.habitPublisher)
-                            
                         }
                     )
                 }
             })
+    }
+}
+
+extension HabitViewModel {
+    func habitCreateView() -> some View {
+        return HabitViewRouter.makeHabitCreateView(habitPublisher: habitPublisher)
     }
 }

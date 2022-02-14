@@ -62,9 +62,11 @@ struct ProfileView: View {
                                 HStack {
                                     Text("Celular")
                                     Spacer()
-                                    TextField("Digite o número de celular", text: $viewModel.phoneValidation.value)
-                                        .keyboardType(.numberPad)
-                                        .multilineTextAlignment(.trailing)
+                                    ProfileTextView(text: $viewModel.phoneValidation.value,
+                                                    placeholder: "Digite seu número",
+                                                    mask: "(##) ####-####",
+                                                    keyboard: .numberPad)
+                                    
                                 }
                                 
                                 if viewModel.phoneValidation.failure {
@@ -75,8 +77,10 @@ struct ProfileView: View {
                                 HStack {
                                     Text("Nascimento")
                                     Spacer()
-                                    TextField("Digite a data de nascimento", text: $viewModel.birthdayValidation.value)
-                                        .multilineTextAlignment(.trailing)
+                                    ProfileTextView(text: $viewModel.birthdayValidation.value,
+                                                    placeholder: "Digite a data de nascimento",
+                                                    mask: "##/##/####",
+                                                    keyboard: .numberPad)
                                 }
                                 
                                 if viewModel.birthdayValidation.failure {
@@ -112,7 +116,7 @@ struct ProfileView: View {
                             viewModel.uiState = .none
                         })
                     }
-                    .opacity(disableDone ? 0 : 1 )
+                                            .opacity(disableDone ? 0 : 1 )
                     )
                 }
             }

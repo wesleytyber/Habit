@@ -65,7 +65,8 @@ extension SignUpView {
                      placeholder: "Digite seu nome completo *",
                      keyboard: .alphabet,
                      error: "Nome deve ter mais de 3 caracteres",
-                     failure: viewModel.fullName.count < 3)
+                     failure: viewModel.fullName.count < 3,
+                     autocaptalization: .words)
     }
 }
 
@@ -94,9 +95,10 @@ extension SignUpView {
     var documentField: some View {
         EditTextView(text: $viewModel.document,
                      placeholder: "Digite seu CPF *",
+                     mask: "###.###.###-##",
                      keyboard: .numberPad,
                      error: "CPF inválido",
-                     failure: viewModel.document.count != 11)
+                     failure: viewModel.document.count != 14)
     }
 }
 
@@ -104,9 +106,10 @@ extension SignUpView {
     var numberField: some View {
         EditTextView(text: $viewModel.number,
                      placeholder: "Digite seu número de celular *",
+                     mask: "(##) ####-####",
                      keyboard: .numberPad,
                      error: "Digite o DDD + 8 ou 9 digitos",
-                     failure: viewModel.number.count < 10 || viewModel.number.count >= 12 )
+                     failure: viewModel.number.count < 14 || viewModel.number.count >= 15 )
     }
 }
 
@@ -114,7 +117,8 @@ extension SignUpView {
     var birthdayField: some View {
         EditTextView(text: $viewModel.birthday,
                      placeholder: "Digite sua data de nascimento *",
-                     keyboard: .default,
+                     mask: "##/##/####",
+                     keyboard: .numberPad ,
                      error: "Digite o formato dd/MM/yyyy",
                      failure: viewModel.birthday.count != 10)
     }
@@ -140,8 +144,8 @@ extension SignUpView {
         }, text: "Realizar o cadastro", showProgress: self.viewModel.uiState == SignUpUIState.loading, disabled:  !viewModel.email.isEmail() ||
                           viewModel.password.count < 8 ||
                           viewModel.fullName.count < 3 ||
-                          viewModel.document.count != 11 ||
-                          viewModel.number.count < 10 ||  viewModel.number.count >= 12 ||
+                          viewModel.document.count != 14 ||
+                          viewModel.number.count < 14 || viewModel.number.count >= 15 ||
                           viewModel.birthday.count != 10)
         
     }
