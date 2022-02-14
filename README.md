@@ -3,7 +3,7 @@
 <div align="center">
 <img width="300px" height="610px" src="Assets.xcassets/splash.imageset/splash.png"/>
   <img width="300px" height="610px" src="Assets.xcassets/signin.imageset/signin.png"/>
-    <img width="300px" height="610px" src="Assets.xcassets/signup.imageset/signup.png"/><br/>
+    <img width="300px" height="610px" src="Assets.xcassets/signup.imageset/signup.png"/>
       <img width="300px" height="610px" src="Assets.xcassets/home.imageset/home.png"/>
       <img width="300px" height="610px" src="Assets.xcassets/newhabit.imageset/newhabit.png"/>
       <img width="300px" height="610px" src="Assets.xcassets/hourhabit.imageset/hourhabit.png"/>
